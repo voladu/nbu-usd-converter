@@ -1,0 +1,30 @@
+﻿@model WebChEx.Models.ExModel
+@{
+        ViewData["Title"] = "";        
+    }
+<div class="row">
+    <form asp-action="Index" asp-controller="Home" data-ajax="true" data-ajax-method="POST">
+        <p>Date: <input type="text" id="datepicker" asp-for="ExRealDate" />  
+          <input type="text" id="altDate" asp-for="ExDate" />
+        </p>
+        <p> Summa (UAH): <input type="text" id="summa" asp-for="ExSum" />           
+        </p>
+        <input type="submit" value="Go" />
+    </form>
+   @if (null != ViewData["exTotal"])
+   {
+       <p id="resultLine">
+            Result (USD): <span id="result">@ViewData["exTotal"]</span> <br />
+            <span id="rate">Rate: @ViewData["exRate"]</span>
+        </p>
+   }
+    @if (null != ViewData["HistoryList"])
+    {
+        <hr />
+        <p id="history">
+            @Html.Raw(ViewData["HistoryList"].ToString())
+        </p>
+    }
+
+       
+</div>
