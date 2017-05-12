@@ -5,7 +5,7 @@
 <div class="row">
     <form asp-action="Index" asp-controller="Home" data-ajax="true" data-ajax-method="POST">
         <p>Date: <input type="text" id="datepicker" asp-for="ExRealDate" />  
-          <input type="text" id="altDate" asp-for="ExDate" />
+          <input type="text" id="altDate" readonly asp-for="ExDate" style="display:block" />
         </p>
         <p> Summa (UAH): <input type="text" id="summa" asp-for="ExSum" />           
         </p>

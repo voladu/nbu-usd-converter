@@ -13,8 +13,8 @@ namespace WebChEx.Models
 
         public ExModel()
         {
-            ExDate = DateTime.Now.ToString("yyyyMMdd");
-            ExRealDate = DateTime.Now.ToString("dd.MM.yyyy");
+            ExDate = DateTime.Now.ToString("yyMMdd");
+            ExRealDate = DateTime.Now.ToString("dd.MM.yy");
             ExSum = "100";
         }
     }
